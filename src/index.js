@@ -37,7 +37,7 @@ export default class ToolTip extends React.Component {
 
     const postion = getPosition({ width, height, x, y, clientWidth: this.clientWidth, clientHeight: this.clientHeight });
     return (
-      <div style={show ? { ...Object.assign(Rectstyle, tooltipStyle), top: `${postion.y + 20}px`, left: `${postion.x + 20}px` } : { display: 'none' }}>
+      <div style={show ? { ...Object.assign({}, Rectstyle, tooltipStyle), top: `${postion.y + 20}px`, left: `${postion.x + 20}px` } : { display: 'none' }}>
         {title ? <div style={headerStyle}>{title}</div> : null}
         {tooltipText ?
           <div style={{ position: 'relative', whiteSpace: 'nowrap' }}>
